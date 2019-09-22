@@ -225,10 +225,11 @@ GameObject:
   m_Component:
   - component: {fileID: 305317213}
   - component: {fileID: 305317216}
+  - component: {fileID: 305317217}
   - component: {fileID: 305317215}
   - component: {fileID: 305317214}
   m_Layer: 5
-  m_Name: Quit Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,7 +298,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 305317217}
         m_MethodName: quitPage
         m_Mode: 1
         m_Arguments:
@@ -348,6 +349,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305317212}
   m_CullTransparentMesh: 0
+--- !u!114 &305317217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305317212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fed2e99ead9f4355b78aafd5ce7df03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &444493226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,9 +1900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'QUIT
-
-'
+  m_Text: EXIT
 --- !u!222 &1994522595
 CanvasRenderer:
   m_ObjectHideFlags: 0
