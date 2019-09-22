@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 489636334}
   - component: {fileID: 489636337}
   - component: {fileID: 489636336}
+  - component: {fileID: 489636338}
   - component: {fileID: 489636335}
   m_Layer: 5
   m_Name: 'Instructions Button '
@@ -513,7 +514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 489636338}
         m_MethodName: openInstructionPanel
         m_Mode: 1
         m_Arguments:
@@ -564,6 +565,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489636333}
   m_CullTransparentMesh: 0
+--- !u!114 &489636338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489636333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4dd2ad5a1d04d808565babbae55a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panel: {fileID: 1574125763}
 --- !u!1 &553236616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1574125764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1623,7 +1637,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1869328706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb708d58ed2a5470baf2308dac921980, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d4dd2ad5a1d04d808565babbae55a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 1574125763}
