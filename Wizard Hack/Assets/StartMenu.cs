@@ -10,7 +10,7 @@ public class StartMenu : MonoBehaviour
     public GameObject Menu;
    public void PlayGame()
     {
-
+        SceneManager.LoadScene("Map_Level");
     }
 
     public void QuitGame()
