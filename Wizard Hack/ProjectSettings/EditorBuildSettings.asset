@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map_Level.unity
     guid: d362af6fb73dba846b655099f72381c4
+  - enabled: 1
+    path: Assets/Scenes/dummybuttons.unity
+    guid: 4b0e5e31262bd4878bc6673cf9fa8e14
   m_configObjects: {}
