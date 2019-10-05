@@ -1110,6 +1110,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63362076f223b4d70889157d4a9e106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1000952088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1792174544579821949, guid: 1536c09954bf1de4ca5236680ec04903,
+    type: 3}
+  m_PrefabInstance: {fileID: 9061713941897555002}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1000952091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000952088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186af124da4dd47af86c18a31b9be08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 100
+  playerCurrentHealth: 100
+  initialMana: 100
+  playerCurrentMana: 100
+  playerHealthSlider: {fileID: 2097401098}
+  playerManaSlider: {fileID: 158880345}
+  damageImage: {fileID: 1882358529}
 --- !u!1 &1391054326
 GameObject:
   m_ObjectHideFlags: 0
