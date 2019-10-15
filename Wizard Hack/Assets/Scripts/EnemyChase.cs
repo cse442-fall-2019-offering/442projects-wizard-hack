@@ -41,11 +41,7 @@ public class EnemyChase : MonoBehaviour
         	animator.SetFloat("Speed", 0);
         }
 
-        if (distanceToPlayer <= 2){
-        	animator.SetBool("Should_Attack", true);
-        } else {
-        	animator.SetBool("Should_Attack", false);
-        }
+        
         // ** End **
     }
 
