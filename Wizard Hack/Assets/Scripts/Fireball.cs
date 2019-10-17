@@ -5,14 +5,15 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
 
-    public float speed = 20f;
+    public float speed = 12f;
     public int damage = 20;
+    public int manaCost = 15;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-       // rb.velocity = transform.right * speed;
+       rb.velocity = transform.right * speed;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +23,6 @@ public class Fireball : MonoBehaviour
         {
             enemyHealth.damageEnemy(damage);   
         }
-        Destroy(gameObject);
+       // Destroy(gameObject);
     }
 }
