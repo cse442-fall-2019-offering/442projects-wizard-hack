@@ -5,19 +5,20 @@ using UnityEngine;
 public class MagicShooting : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject magicPrefab;
+    public Fireball fireball;
     PlayerHealth playerHealth;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             playerHealth = gameObject.GetComponent<PlayerHealth>();
+            Debug.Log("Mana Cost inside Magic Shooting: " + fireball.manaCost);
             
-            if (playerHealth.playerCurrentMana >= 15)
+            if (playerHealth.playerCurrentMana >= fireball.manaCost)
             {
-                shoot(15f);
+                shoot(fireball.manaCost);
             }
         }
     }
@@ -25,6 +26,6 @@ public class MagicShooting : MonoBehaviour
     void shoot(float manaCost)
     {
         playerHealth.useMana(manaCost);
-        Instantiate(magicPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(fireball, firePoint.position, firePoint.rotation);    
     }
 }
