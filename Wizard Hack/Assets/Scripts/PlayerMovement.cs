@@ -20,6 +20,40 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        updateFirePointandAnimatorFacing();
+    }
+
+    void updateFirePointandAnimatorFacing()
+    {
+        if (Input.GetKeyDown("up"))
+        {
+            animator.SetInteger("Facing", 0);
+            MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
+            Quaternion quaternion = Quaternion.Euler(0, 0, 90);
+            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+        }
+        if (Input.GetKeyDown("right"))
+        {
+            animator.SetInteger("Facing", 1);
+            MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
+            Quaternion quaternion = Quaternion.Euler(0, 0, 0);
+            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+        }
+        if (Input.GetKeyDown("down"))
+        {
+            animator.SetInteger("Facing", 2);
+            MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
+            Quaternion quaternion = Quaternion.Euler(0, 0, -90);
+            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+        }
+        if (Input.GetKeyDown("left"))
+        {
+            animator.SetInteger("Facing", 3);
+            MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
+            Quaternion quaternion = Quaternion.Euler(0, 0, 180);
+            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+        }
     }
 
     void FixedUpdate(){

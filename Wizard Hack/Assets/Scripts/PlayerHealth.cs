@@ -8,8 +8,9 @@ public class PlayerHealth : MonoBehaviour
 
     public int initialHealth = 100;
     public int playerCurrentHealth;
-    public int initialMana = 100;
-    public int playerCurrentMana;
+    public float initialMana = 100;
+    public float playerCurrentMana;
+    public float manaRegenRate = .1f;
     public Slider playerHealthSlider;
     public Slider playerManaSlider;
     public Image damageImage;
@@ -27,7 +28,14 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerCurrentMana + manaRegenRate > initialMana)
+        {
+            playerCurrentMana = initialMana;
+        }
+        else if (playerCurrentMana < initialMana)
+        {
+            gainMana(manaRegenRate);
+        }
     }
 
 
@@ -43,13 +51,13 @@ public class PlayerHealth : MonoBehaviour
         playerHealthSlider.value = playerCurrentHealth;
     }
 
-    public void useMana(int usedAmount)
+    public void useMana(float usedAmount)
     {
         playerCurrentMana -= usedAmount;
         playerManaSlider.value = playerCurrentMana;
     }
 
-    public void gainMana(int gainAmount)
+    public void gainMana(float gainAmount)
     {
         playerCurrentMana += gainAmount;
         playerManaSlider.value = playerCurrentMana;
