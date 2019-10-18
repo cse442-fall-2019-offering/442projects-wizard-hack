@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1000161854}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
@@ -104621,6 +104621,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 344814981461843096, guid: 1feb10319db336349bdfb99a0c961441,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 344814981461843096, guid: 1feb10319db336349bdfb99a0c961441,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 344814983269256604, guid: 1feb10319db336349bdfb99a0c961441,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 344814982312442035, guid: 1feb10319db336349bdfb99a0c961441,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1784299989911193099, guid: 1feb10319db336349bdfb99a0c961441,
         type: 3}
       propertyPath: m_Name
@@ -104679,21 +104699,6 @@ PrefabInstance:
     - target: {fileID: 9061482782323544103, guid: 1feb10319db336349bdfb99a0c961441,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 344814982312442035, guid: 1feb10319db336349bdfb99a0c961441,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 344814981461843096, guid: 1feb10319db336349bdfb99a0c961441,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 344814981461843096, guid: 1feb10319db336349bdfb99a0c961441,
-        type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
