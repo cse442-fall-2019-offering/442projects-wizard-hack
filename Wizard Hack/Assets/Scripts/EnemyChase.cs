@@ -10,8 +10,8 @@ public class EnemyChase : MonoBehaviour
     public float x;
     public float y;
     public float z;
-
 	private Transform player;
+
     // Start is called before the first frame update
     void Start() {
         transform.localScale = new Vector3(x, y, z);
@@ -30,11 +30,11 @@ public class EnemyChase : MonoBehaviour
 	        } else {
 	        	transform.localScale = new Vector3(-x, y, z);
 	        }
-	        // ** End **
+            // ** End **
 
-        	// ** CHASE PLAYER **
-            	transform.position = Vector2.MoveTowards(transform.position, player.position, speed*Time.deltaTime);
-            	animator.SetFloat("Speed", 1);
+            // ** CHASE PLAYER **
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed*Time.deltaTime);
+            animator.SetFloat("Speed", 1);
             // ** CATCH PLAYER ** 
 
         } else {

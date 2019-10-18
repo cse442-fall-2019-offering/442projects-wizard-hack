@@ -19,9 +19,7 @@ public class EnemyHealth : MonoBehaviour
     public void damageEnemy(int damageAmount)
     {
         enemyCurrentHealth -= damageAmount;
-        enemyHealthSlider.value -= enemyCurrentHealth;
+        enemyHealthSlider.value = enemyCurrentHealth;
     }
-
-
 
 }
