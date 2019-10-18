@@ -53,4 +53,5 @@ public class EnemyChase : MonoBehaviour
    	void moveEnemy(Vector2 a){
 
    	}
+
 }
