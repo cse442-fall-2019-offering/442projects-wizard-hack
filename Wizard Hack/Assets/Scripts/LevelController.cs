@@ -34,4 +34,10 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 0f;
         Debug.Log("VICTORY!!!");
     }
+
+    public void mainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Start_Menu");
+    }
 }
