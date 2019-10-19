@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
 
     public int initialHealth = 100;
     public int enemyCurrentHealth;
+    public bool isDead = false;
     public Slider enemyHealthSlider;
     public Animator animator;
     // Start is called before the first frame update
@@ -29,8 +30,13 @@ public class EnemyHealth : MonoBehaviour
 
     void death()
     {
+        isDead = true;
         animator.SetBool("Dead", true);
-        gameObject.GetComponent<EnemyChase>().isDead = true;
+
+        GameObject levelControllerObj = GameObject.Find("LevelController");
+        LevelController levelController = levelControllerObj.GetComponent<LevelController>();
+        levelController.enemyDead();
+
         Destroy(gameObject, 1.5f);
     }
 

@@ -20,6 +20,10 @@ public class Fireball : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        if (enemyHealth != null && enemyHealth.isDead)
+        {
+            return;
+        }
         if (enemyHealth != null)
         {
             enemyHealth.damageEnemy(damage);

@@ -10,7 +10,6 @@ public class EnemyChase : MonoBehaviour
     public float x;
     public float y;
     public float z;
-    public bool isDead = false;
 	private Transform player;
 
     // Start is called before the first frame update
@@ -26,7 +25,8 @@ public class EnemyChase : MonoBehaviour
 	    	// ** LOOK AT PLAYER **
 	        Vector3 distanceVector = player.position - transform.position;
             // Debug.Log(direction[0]);
-            if (!isDead)
+
+            if (!gameObject.GetComponent<EnemyHealth>().isDead)
             {
                 if (distanceVector[0]>=0){
 	        	    transform.localScale = new Vector3(x, y, z);
