@@ -13,9 +13,7 @@ public class MagicShooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            playerHealth = gameObject.GetComponent<PlayerHealth>();
-            Debug.Log("Mana Cost inside Magic Shooting: " + fireball.manaCost);
-            
+            playerHealth = gameObject.GetComponent<PlayerHealth>();            
             if (playerHealth.playerCurrentMana >= fireball.manaCost)
             {
                 shoot(fireball.manaCost);
@@ -25,7 +23,7 @@ public class MagicShooting : MonoBehaviour
 
     void shoot(float manaCost)
     {
-        //playerHealth.useMana(manaCost);
+        playerHealth.useMana(manaCost);
         Instantiate(fireball, firePoint.position, firePoint.rotation);    
     }
 }
