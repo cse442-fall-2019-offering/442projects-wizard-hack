@@ -10,6 +10,7 @@ public class EnemyChase : MonoBehaviour
     public float x;
     public float y;
     public float z;
+    public bool isDead = false;
 	private Transform player;
 
     // Start is called before the first frame update
@@ -24,17 +25,20 @@ public class EnemyChase : MonoBehaviour
         if(distanceToPlayer < distanceToStartAttack && distanceToPlayer > 1) {
 	    	// ** LOOK AT PLAYER **
 	        Vector3 distanceVector = player.position - transform.position;
-	        // Debug.Log(direction[0]);
-	        if (distanceVector[0]>=0){
-	        	transform.localScale = new Vector3(x, y, z);
-	        } else {
-	        	transform.localScale = new Vector3(-x, y, z);
-	        }
+            // Debug.Log(direction[0]);
+            if (!isDead)
+            {
+                if (distanceVector[0]>=0){
+	        	    transform.localScale = new Vector3(x, y, z);
+	            } else {
+	        	    transform.localScale = new Vector3(-x, y, z);
+                }
             // ** End **
 
             // ** CHASE PLAYER **
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed*Time.deltaTime);
-            animator.SetFloat("Speed", 1);
+                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                animator.SetFloat("Speed", 1);
+            }
             // ** CATCH PLAYER ** 
 
         } else {
