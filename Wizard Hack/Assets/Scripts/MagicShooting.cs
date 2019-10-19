@@ -23,7 +23,7 @@ public class MagicShooting : MonoBehaviour
 
     void shoot(float manaCost)
     {
-        playerHealth.useMana(manaCost);
+        //playerHealth.useMana(manaCost);
         Instantiate(fireball, firePoint.position, firePoint.rotation);    
     }
 }

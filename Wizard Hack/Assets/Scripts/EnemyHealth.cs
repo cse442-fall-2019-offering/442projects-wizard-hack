@@ -33,9 +33,7 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         animator.SetBool("Dead", true);
 
-        GameObject levelControllerObj = GameObject.Find("LevelController");
-        LevelController levelController = levelControllerObj.GetComponent<LevelController>();
-        levelController.enemyDead();
+        FindObjectOfType<LevelController>().enemyDead();
 
         Destroy(gameObject, 1.5f);
     }
