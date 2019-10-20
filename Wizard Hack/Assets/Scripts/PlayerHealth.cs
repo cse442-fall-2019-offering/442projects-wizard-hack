@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (playerCurrentMana + manaRegenRate > initialMana)
         {
             playerCurrentMana = initialMana;
@@ -37,9 +38,9 @@ public class PlayerHealth : MonoBehaviour
         {
             gainMana(manaRegenRate);
         }
-        if(initialHealth <= 0)
+        if(playerCurrentHealth <= 0)
         {
-            SceneManager.LoadScene("Game_Over");
+            SceneManager.LoadScene("Game_Over_Screen");
         }
     }
 
