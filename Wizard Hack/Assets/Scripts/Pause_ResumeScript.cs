@@ -13,8 +13,8 @@ public class Pause_ResumeScript : MonoBehaviour
     }
 
     public void GotoHomeScene(){
-        Application.LoadLevel("Start_Menu");
-        //SceneManager.LoadScene("Start_Menu".buildIndex);
+        //Application.LoadLevel("Start_Menu");
+        SceneManager.LoadScene("Start_Menu");
     }
 
   /*  public void GotoMenuScene()
