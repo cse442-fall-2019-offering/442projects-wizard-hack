@@ -368,6 +368,16 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4482193929697366680, guid: 402ac2dc4ca0ffe41a209b944d5d471b,
+        type: 3}
+      propertyPath: my_player
+      value: 
+      objectReference: {fileID: 702136548}
+    - target: {fileID: 4482193929697366680, guid: 402ac2dc4ca0ffe41a209b944d5d471b,
+        type: 3}
+      propertyPath: damageAmount
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 402ac2dc4ca0ffe41a209b944d5d471b, type: 3}
 --- !u!1 &158880343
@@ -620,6 +630,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512703357561692500, guid: fa6257bfd10584c498dd4040858cb807,
+        type: 3}
+      propertyPath: my_player
+      value: 
+      objectReference: {fileID: 702136548}
+    - target: {fileID: 4512703357561692500, guid: fa6257bfd10584c498dd4040858cb807,
+        type: 3}
+      propertyPath: damageAmount
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa6257bfd10584c498dd4040858cb807, type: 3}
@@ -104468,26 +104488,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6705114726400926107, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Skeleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6705114726400926107, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601167876865875789, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601167876865875789, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.63
-      objectReference: {fileID: 0}
     - target: {fileID: 4039337053879236535, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -104543,6 +104543,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4601167876865875789, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601167876865875789, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705114726400926107, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Skeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705114726400926107, guid: 8ff78cf6bcac2485abd0df4e7202a5c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ff78cf6bcac2485abd0df4e7202a5c2, type: 3}
 --- !u!1001 &6601820600757405023
@@ -104552,16 +104572,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 700238942086497537, guid: 5578d38f4137c47bc9d921f2f33ca7c6,
-        type: 3}
-      propertyPath: m_Name
-      value: Minotaur
-      objectReference: {fileID: 0}
-    - target: {fileID: 700238942086497537, guid: 5578d38f4137c47bc9d921f2f33ca7c6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 219959428620657945, guid: 5578d38f4137c47bc9d921f2f33ca7c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -104571,6 +104581,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 700238942086497537, guid: 5578d38f4137c47bc9d921f2f33ca7c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Minotaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 700238942086497537, guid: 5578d38f4137c47bc9d921f2f33ca7c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8371949589543571958, guid: 5578d38f4137c47bc9d921f2f33ca7c6,
         type: 3}

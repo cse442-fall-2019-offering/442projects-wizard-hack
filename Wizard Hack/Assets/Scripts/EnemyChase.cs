@@ -11,9 +11,17 @@ public class EnemyChase : MonoBehaviour
     public float y;
     public float z;
 	private Transform player;
+    public int damageAmount;
+
+	public GameObject my_player;
+	PlayerHealth ph;
+
+    private double count = 0.5;
+    private bool canAttack = true;
 
     // Start is called before the first frame update
     void Start() {
+    	ph = my_player.GetComponent<PlayerHealth>();
         transform.localScale = new Vector3(x, y, z);
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -45,17 +53,32 @@ public class EnemyChase : MonoBehaviour
         	animator.SetFloat("Speed", 0);
         }
 
-        if (distanceToPlayer <= 2){
-        	animator.SetBool("Should_Attack", true);
-        } else {
-        	animator.SetBool("Should_Attack", false);
+        if (canAttack){
+            if (distanceToPlayer <= 2){
+            	attack();
+            } else {
+            	animator.SetBool("Should_Attack", false);
+            }
         }
+        checkTime();
         // ** End **
     }
 
+    void checkTime(){
+        if (Time.time > count){
+            count +=1.0;
+            canAttack = true;
+        }
+    }
 
-   	void moveEnemy(Vector2 a){
+    void attack()
+    {
+        animator.SetBool("Should_Attack", true);
+        ph.damagePlayer(damageAmount); 
+        canAttack = false;
+        // animator.SetBool("Should_Attack", false);
+    }
 
-   	}
+
 
 }
