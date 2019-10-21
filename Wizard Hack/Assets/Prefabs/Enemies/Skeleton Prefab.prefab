@@ -571,6 +571,9 @@ MonoBehaviour:
   x: 5
   y: 5
   z: 5
+  damageAmount: 15
+  my_player: {fileID: 5737358373694136415, guid: 1536c09954bf1de4ca5236680ec04903,
+    type: 3}
 --- !u!114 &4482193929697366687
 MonoBehaviour:
   m_ObjectHideFlags: 0
