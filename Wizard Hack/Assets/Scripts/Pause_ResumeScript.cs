@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Pause_ResumeScript : MonoBehaviour
 {
-	
-	 public void GotoMainScene()
+
+    public GameObject pauseMenu;
+
+    public void GotoMainScene()
     {
         SceneManager.LoadScene("Map_Level");
     }
@@ -31,12 +33,21 @@ public class Pause_ResumeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetKeyDown(KeyCode.P)){
-
-       		SceneManager.LoadScene("dummy buttons");
-
-    	}
+      
     	
         
+    }
+
+
+    public void pause()
+    {
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+    }
+
+    public void resume()
+    {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
     }
 }
