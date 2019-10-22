@@ -28,40 +28,52 @@ public class EnemyChase : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-    	float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if(distanceToPlayer < distanceToStartAttack && distanceToPlayer > 1) {
-	    	// ** LOOK AT PLAYER **
-	        Vector3 distanceVector = player.position - transform.position;
-            // Debug.Log(direction[0]);
-
-            if (!gameObject.GetComponent<EnemyHealth>().isDead)
+        if (!gameObject.GetComponent<EnemyHealth>().isDead)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            if (distanceToPlayer < distanceToStartAttack && distanceToPlayer > 1)
             {
-                if (distanceVector[0]>=0){
-	        	    transform.localScale = new Vector3(x, y, z);
-	            } else {
-	        	    transform.localScale = new Vector3(-x, y, z);
-                }
-            // ** End **
+                // ** LOOK AT PLAYER **
+                Vector3 distanceVector = player.position - transform.position;
+                // Debug.Log(direction[0]);
 
-            // ** CHASE PLAYER **
+
+                if (distanceVector[0] >= 0)
+                {
+                    transform.localScale = new Vector3(x, y, z);
+                }
+                else
+                {
+                    transform.localScale = new Vector3(-x, y, z);
+                }
+                // ** End **
+
+                // ** CHASE PLAYER **
                 transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
                 animator.SetFloat("Speed", 1);
-            }
-            // ** CATCH PLAYER ** 
 
-        } else {
-        	animator.SetFloat("Speed", 0);
-        }
+                // ** CATCH PLAYER ** 
 
-        if (canAttack){
-            if (distanceToPlayer <= 2){
-            	attack();
-            } else {
-            	animator.SetBool("Should_Attack", false);
             }
+            else
+            {
+                animator.SetFloat("Speed", 0);
+            }
+
+            if (canAttack)
+            {
+                if (distanceToPlayer <= 2)
+                {
+                    attack();
+                }
+                else
+                {
+                    animator.SetBool("Should_Attack", false);
+                }
+            }
+            checkTime();
+            // ** End **
         }
-        checkTime();
-        // ** End **
     }
 
     void checkTime(){
