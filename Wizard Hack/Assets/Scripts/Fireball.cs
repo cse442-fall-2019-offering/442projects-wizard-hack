@@ -27,7 +27,8 @@ public class Fireball : MonoBehaviour
         if (enemyHealth != null)
         {
             enemyHealth.damageEnemy(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 }
