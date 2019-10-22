@@ -557,6 +557,11 @@ PrefabInstance:
       propertyPath: damageAmount
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4482193929697366680, guid: 402ac2dc4ca0ffe41a209b944d5d471b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 402ac2dc4ca0ffe41a209b944d5d471b, type: 3}
 --- !u!1 &158880343
@@ -1405,12 +1410,12 @@ PrefabInstance:
     - target: {fileID: 4512703357561692498, guid: fa6257bfd10584c498dd4040858cb807,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8403938
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 4512703357561692498, guid: fa6257bfd10584c498dd4040858cb807,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4829789
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 4512703357561692498, guid: fa6257bfd10584c498dd4040858cb807,
         type: 3}
@@ -1457,11 +1462,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4512703357561692497, guid: fa6257bfd10584c498dd4040858cb807,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4512703356350755434, guid: fa6257bfd10584c498dd4040858cb807,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1481,6 +1481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: damageAmount
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512703357561692497, guid: fa6257bfd10584c498dd4040858cb807,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa6257bfd10584c498dd4040858cb807, type: 3}
@@ -108276,6 +108281,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7057883715602005174, guid: 68892f86c8cda0d4e9c8e1b66e05173d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057883715602005174, guid: 68892f86c8cda0d4e9c8e1b66e05173d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7057883714424398900, guid: 68892f86c8cda0d4e9c8e1b66e05173d,
         type: 3}
       propertyPath: m_Name
@@ -108396,16 +108411,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7057883715602005174, guid: 68892f86c8cda0d4e9c8e1b66e05173d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7057883715602005174, guid: 68892f86c8cda0d4e9c8e1b66e05173d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68892f86c8cda0d4e9c8e1b66e05173d, type: 3}
 --- !u!1001 &8980734716509185110
@@ -108420,6 +108425,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5692382245716273201, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
+        type: 3}
+      propertyPath: playerHealthSlider
+      value: 
+      objectReference: {fileID: 2097401098}
+    - target: {fileID: 5692382245716273201, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
+        type: 3}
+      propertyPath: playerManaSlider
+      value: 
+      objectReference: {fileID: 158880345}
+    - target: {fileID: 5692382245716273201, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
+        type: 3}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1882358529}
     - target: {fileID: 5692382245716273210, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -108475,20 +108495,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5692382245716273201, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
-        type: 3}
-      propertyPath: playerHealthSlider
-      value: 
-      objectReference: {fileID: 2097401098}
-    - target: {fileID: 5692382245716273201, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
-        type: 3}
-      propertyPath: playerManaSlider
-      value: 
-      objectReference: {fileID: 158880345}
-    - target: {fileID: 5692382245716273201, guid: 284b1bcef4b6c564d9091a8dfb6c8a39,
-        type: 3}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 1882358529}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284b1bcef4b6c564d9091a8dfb6c8a39, type: 3}
