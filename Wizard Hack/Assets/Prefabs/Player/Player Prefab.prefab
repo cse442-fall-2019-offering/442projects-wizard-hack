@@ -169,9 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eabef3685e040fb8f5fbdf2921cb27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 5737358373694136400}
-  animator: {fileID: 5737358373694136403}
+  lf_moveSpeed: 5
+  lo_rb: {fileID: 5737358373694136400}
+  lo_animator: {fileID: 5737358373694136403}
 --- !u!114 &5737358373694136413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,14 +184,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186af124da4dd47af86c18a31b9be08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialHealth: 100
-  playerCurrentHealth: 100
-  initialMana: 100
-  playerCurrentMana: 100
-  manaRegenRate: 0.1
-  playerHealthSlider: {fileID: 0}
-  playerManaSlider: {fileID: 0}
-  damageImage: {fileID: 0}
+  li_initialHealth: 100
+  li_playerCurrentHealth: 0
+  lf_initialMana: 100
+  lf_playerCurrentMana: 0
+  lf_manaRegenRate: 0.1
+  lo_playerHealthSlider: {fileID: 0}
+  lo_playerManaSlider: {fileID: 0}
+  lo_damageImage: {fileID: 0}
 --- !u!114 &5737358373694136412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +204,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf0976c647fbc0439447b32dae97e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 5737358373667597232}
-  fireball: {fileID: -7181975749340416609, guid: a7a7fa99678ea414a9902e7ac24a876a,
-    type: 3}
+  lo_firePoint: {fileID: 0}
+  lo_fireball: {fileID: 0}

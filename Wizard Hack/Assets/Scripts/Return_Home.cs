@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * This class is used to pull up the end game screen
+ * Included methods: GoToHome, Start, Update
+ */
+
 public class Return_Home : MonoBehaviour
 {
 
-    public int c;
-
+    
+    /*
+     * input: none
+     * output: none
+     * loads the game over screen
+     */
     public void GoToHome(){
          SceneManager.LoadScene("Game_Over_Screen");
     }

@@ -2,61 +2,80 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * this class allows the player to move and shoot fireballs
+ * methods: Update, updateFirePointandAnimatorFacing, fixedUpdate
+ */
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public Rigidbody2D rb;
-    public Animator animator;
+    public float lf_moveSpeed = 5f;
+    public Rigidbody2D lo_rb;
+    public Animator lo_animator;
 
-    Vector2 movement;
+    Vector2 lo_movement;
 
 
     // Update is called once per frame
+    /*
+     * input: none
+     * output:
+     * updates the position of the player
+     */
     void Update()
     {
-        movement.x=Input.GetAxisRaw("Horizontal");
-        movement.y= Input.GetAxisRaw("Vertical");
+        lo_movement.x=Input.GetAxisRaw("Horizontal");
+        lo_movement.y= Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        lo_animator.SetFloat("Horizontal", lo_movement.x);
+        lo_animator.SetFloat("Vertical", lo_movement.y);
+        lo_animator.SetFloat("Speed", lo_movement.sqrMagnitude);
 
         updateFirePointandAnimatorFacing();
     }
-
+    /*
+     * input: none
+     * output: none
+     * updates the direction of the players fireball
+     */
     void updateFirePointandAnimatorFacing()
     {
         if (Input.GetKeyDown("up"))
         {
-            animator.SetInteger("Facing", 0);
+            lo_animator.SetInteger("Facing", 0);
             MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
             Quaternion quaternion = Quaternion.Euler(0, 0, 90);
-            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+            magicShooting.lo_firePoint.SetPositionAndRotation(magicShooting.lo_firePoint.position, quaternion);
         }
         if (Input.GetKeyDown("right"))
         {
-            animator.SetInteger("Facing", 1);
+            lo_animator.SetInteger("Facing", 1);
             MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
             Quaternion quaternion = Quaternion.Euler(0, 0, 0);
-            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+            magicShooting.lo_firePoint.SetPositionAndRotation(magicShooting.lo_firePoint.position, quaternion);
         }
         if (Input.GetKeyDown("down"))
         {
-            animator.SetInteger("Facing", 2);
+            lo_animator.SetInteger("Facing", 2);
             MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
             Quaternion quaternion = Quaternion.Euler(0, 0, -90);
-            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+            magicShooting.lo_firePoint.SetPositionAndRotation(magicShooting.lo_firePoint.position, quaternion);
         }
         if (Input.GetKeyDown("left"))
         {
-            animator.SetInteger("Facing", 3);
+            lo_animator.SetInteger("Facing", 3);
             MagicShooting magicShooting = gameObject.GetComponent<MagicShooting>();
             Quaternion quaternion = Quaternion.Euler(0, 0, 180);
-            magicShooting.firePoint.SetPositionAndRotation(magicShooting.firePoint.position, quaternion);
+            magicShooting.lo_firePoint.SetPositionAndRotation(magicShooting.lo_firePoint.position, quaternion);
         }
     }
 
+    /*
+     * input: none
+     * output: none
+     * move the player's collider
+     */
+
     void FixedUpdate(){
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime); 
+        lo_rb.MovePosition(lo_rb.position + lo_movement * lf_moveSpeed * Time.fixedDeltaTime); 
     }
 }
