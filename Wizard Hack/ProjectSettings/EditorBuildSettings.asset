@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/dummybuttons.unity
     guid: 4b0e5e31262bd4878bc6673cf9fa8e14
+  - enabled: 1
+    path: Assets/Scenes/Game_Over_Screen.unity
+    guid: e510e36b150054c5bbc4d4083f856899
   m_configObjects: {}
