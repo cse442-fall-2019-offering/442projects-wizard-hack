@@ -613,3 +613,6 @@ MonoBehaviour:
   x: 3
   y: 3
   z: 3
+  damageAmount: 10
+  my_player: {fileID: 5737358373694136415, guid: 1536c09954bf1de4ca5236680ec04903,
+    type: 3}
