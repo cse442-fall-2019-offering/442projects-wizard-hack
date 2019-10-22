@@ -12,6 +12,7 @@ public class InstructionPanelOpener : MonoBehaviour
 		if(Panel != null){
 			bool isActive = Panel.activeSelf;
 			Panel.SetActive(!isActive);
+            Debug.Log("HERE");
 		}
 	}
     // Start is called before the first frame update
@@ -23,6 +24,6 @@ public class InstructionPanelOpener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 }
