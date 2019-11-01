@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
+  - name: health
     uniqueID: 1005604509
+    locked: 0
+  - name: New Layer
+    uniqueID: 855068735
     locked: 0

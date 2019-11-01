@@ -31,7 +31,7 @@ public class EnemyChase : MonoBehaviour
         if (!gameObject.GetComponent<EnemyHealth>().isDead)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            Debug.Log("distance to player: " + distanceToPlayer);
+            // Debug.Log("distance to player: " + distanceToPlayer);
             if (distanceToPlayer < distanceToStartAttack && distanceToPlayer > 1)
             {
                 // ** LOOK AT PLAYER **

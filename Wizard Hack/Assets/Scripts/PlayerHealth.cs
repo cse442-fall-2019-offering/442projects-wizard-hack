@@ -69,4 +69,14 @@ public class PlayerHealth : MonoBehaviour
         playerManaSlider.value = playerCurrentMana;
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag("itemHealth"))
+        {
+            Destroy(col.gameObject);
+        }
+    }
+
+
+
 }
