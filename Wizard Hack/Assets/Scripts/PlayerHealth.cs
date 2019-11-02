@@ -54,6 +54,10 @@ public class PlayerHealth : MonoBehaviour
     public void healPlayer(int healingAmount)
     {
         playerCurrentHealth += healingAmount;
+        if (playerCurrentHealth>100)
+        {
+            playerCurrentHealth = 100;
+        }
         playerHealthSlider.value = playerCurrentHealth;
     }
 
@@ -68,5 +72,16 @@ public class PlayerHealth : MonoBehaviour
         playerCurrentMana += gainAmount;
         playerManaSlider.value = playerCurrentMana;
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag("itemHealth"))
+        {
+            Destroy(col.gameObject);
+            healPlayer(40);
+        }
+    }
+
+
 
 }
