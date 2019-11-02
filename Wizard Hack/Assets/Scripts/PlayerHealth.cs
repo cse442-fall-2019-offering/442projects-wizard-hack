@@ -87,6 +87,7 @@ public class PlayerHealth : MonoBehaviour
         else if(col.CompareTag("itemMana"))
         {
             Destroy(col.gameObject);
+            gainMana(40);
         }
     }
 
