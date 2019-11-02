@@ -70,6 +70,10 @@ public class PlayerHealth : MonoBehaviour
     public void gainMana(float gainAmount)
     {
         playerCurrentMana += gainAmount;
+        if (playerCurrentMana>100)
+        {
+            playerCurrentMana = 100;
+        }
         playerManaSlider.value = playerCurrentMana;
     }
 
@@ -79,6 +83,10 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(col.gameObject);
             healPlayer(40);
+        }
+        else if(col.CompareTag("itemMana"))
+        {
+            Destroy(col.gameObject);
         }
     }
 
