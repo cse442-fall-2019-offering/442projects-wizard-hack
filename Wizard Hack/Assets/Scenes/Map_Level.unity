@@ -218,6 +218,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lo_PlayerMovement: {fileID: 3629511912391494764}
+--- !u!1 &23297616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5866376179395984263, guid: 92cf999a15a354b32b13141d54962adb,
+    type: 3}
+  m_PrefabInstance: {fileID: 603955373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &23297619
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23297616}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0033089817, y: 0.055000007}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.1, y: 0.11}
+    newSize: {x: 0.1, y: 0.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.15294388, y: 0.1563262}
+  m_EdgeRadius: 0
 --- !u!1 &47562837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,6 +2901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866376179395984263, guid: 92cf999a15a354b32b13141d54962adb,
+        type: 3}
+      propertyPath: m_TagString
+      value: itemMana
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92cf999a15a354b32b13141d54962adb, type: 3}
@@ -107331,6 +107368,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6280128486651889204, guid: b0079578caba34d2882e5de7b28338df,
+        type: 3}
+      propertyPath: m_TagString
+      value: itemHealth
+      objectReference: {fileID: 0}
     - target: {fileID: 6280128486014048942, guid: b0079578caba34d2882e5de7b28338df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -107425,11 +107467,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280128486651889204, guid: b0079578caba34d2882e5de7b28338df,
-        type: 3}
-      propertyPath: m_TagString
-      value: itemHealth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0079578caba34d2882e5de7b28338df, type: 3}
