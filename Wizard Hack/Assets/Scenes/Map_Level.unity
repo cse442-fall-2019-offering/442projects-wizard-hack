@@ -2802,6 +2802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potion - Mana
       objectReference: {fileID: 0}
+    - target: {fileID: 5866376179395984263, guid: 92cf999a15a354b32b13141d54962adb,
+        type: 3}
+      propertyPath: m_TagString
+      value: itemMana
+      objectReference: {fileID: 0}
     - target: {fileID: 6883900976099652913, guid: 92cf999a15a354b32b13141d54962adb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2901,11 +2906,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866376179395984263, guid: 92cf999a15a354b32b13141d54962adb,
-        type: 3}
-      propertyPath: m_TagString
-      value: itemMana
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92cf999a15a354b32b13141d54962adb, type: 3}
