@@ -17,5 +17,18 @@ public class Poison : MonoBehaviour
         Destroy(gameObject, lifeTime);
     }
 
-  
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        if (enemyHealth != null && enemyHealth.isDead)
+        {
+            return;
+        }
+        if (enemyHealth != null)
+        {
+            enemyHealth.damageEnemy(damage);
+            Destroy(gameObject);
+        }
+
+    }
 }
