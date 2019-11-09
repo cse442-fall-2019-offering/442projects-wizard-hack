@@ -115,11 +115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de865ee2a0cdebc4a8637d0fa12efb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  manaCost: 10
+  speed: 1
+  manaCost: 15
   lifeTime: 5
   rb: {fileID: 9112580106858708216}
   animator: {fileID: 3272601386362954753}
+  topLevel: 0
+  bottomLevel: 0
+  isPopped: 0
+  direction: 0
+  movingTowardsTop: 0
+  canChangeTopBottomMovement: 1
+  canChangeTopBottomMovementTimerOn: 0
+  canChangeTopBottomMovementTime: 0
 --- !u!50 &9112580106858708216
 Rigidbody2D:
   serializedVersion: 4
