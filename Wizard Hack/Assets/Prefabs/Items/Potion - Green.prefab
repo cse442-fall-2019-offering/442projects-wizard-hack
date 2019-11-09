@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389047212616845153}
   m_Layer: 0
-  m_Name: Potion - Green
+  m_Name: Potion Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
