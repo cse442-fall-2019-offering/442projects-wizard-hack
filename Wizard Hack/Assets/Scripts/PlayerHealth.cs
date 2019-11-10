@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public Slider playerHealthSlider;
     public Slider playerManaSlider;
     public Image damageImage;
+    public GameObject strengthIcon;
 
     bool playerDead;
     bool playerDamaged;
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         playerCurrentMana = initialMana;
         strength = false;
         defense = false;
+        strengthIcon.SetActive(false);
     }
 
     public bool getStrength()
@@ -109,13 +111,15 @@ public class PlayerHealth : MonoBehaviour
     public void addStrength()
     {
         strength = true;
+        strengthIcon.SetActive(true);
         Invoke ("turnFalse", 5);
         
     }
-    
+
     void turnFalse()
     {
         strength = false;
+        strengthIcon.SetActive(false);
     }
 
 }
