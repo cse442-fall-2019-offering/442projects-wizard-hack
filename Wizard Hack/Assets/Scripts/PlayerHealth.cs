@@ -99,7 +99,11 @@ public class PlayerHealth : MonoBehaviour
             Destroy(col.gameObject);
             gainMana(40);
         }
-        
+        else if(col.CompareTag("itemStrength"))
+        {
+            Destroy(col.gameObject);
+            addStrength();
+        }
     }
 
     public void addStrength()
