@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
+    public bool strength;
+    public bool defense;
     public int initialHealth = 100;
     public int playerCurrentHealth;
     public float initialMana = 100;
@@ -24,6 +26,13 @@ public class PlayerHealth : MonoBehaviour
         /* the current health of the player should be the initial value when starting game*/
         playerCurrentHealth = initialHealth;
         playerCurrentMana = initialMana;
+        strength = false;
+        defense = false;
+    }
+
+    public bool getStrength()
+    {
+        return strength;
     }
 
     // Update is called once per frame
@@ -42,6 +51,7 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene("Game_Over_Screen");
         }
+        // Debug.Log("Text: " + strength);
     }
 
 
@@ -89,8 +99,18 @@ public class PlayerHealth : MonoBehaviour
             Destroy(col.gameObject);
             gainMana(40);
         }
+        
     }
 
-
+    public void addStrength()
+    {
+        strength = true;
+        Invoke ("turnFalse", 5);
+        
+    }
+    void turnFalse()
+    {
+        strength = false;
+    }
 
 }
