@@ -106,6 +106,11 @@ public class PlayerHealth : MonoBehaviour
             Destroy(col.gameObject);
             addStrength();
         }
+        else if(col.CompareTag("itemDefense"))
+        {
+            Destroy(col.gameObject);
+
+        }
     }
 
     public void addStrength()
