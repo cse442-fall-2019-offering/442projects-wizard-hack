@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8735575980128110438}
   - component: {fileID: 2765694614557128673}
   - component: {fileID: 7849988938940191421}
-  - component: {fileID: 860113611197745304}
   - component: {fileID: -8318710116710209864}
   m_Layer: 0
   m_Name: Ice Prefab
@@ -29,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8312658582875007641}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.62, y: 1.2, z: -1.3}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.62, y: 0.01, z: 0}
   m_LocalScale: {x: 0.10995942, y: 0.13031948, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6390240663951872680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,7 +100,7 @@ MonoBehaviour:
   damage: 15
   manaCost: 10
   lifeTime: 2
-  rb: {fileID: 2765694614557128673}
+  rb: {fileID: 0}
 --- !u!50 &2765694614557128673
 Rigidbody2D:
   serializedVersion: 4
@@ -130,7 +129,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8312658582875007641}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -149,23 +148,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1068177, y: 4.8}
   m_EdgeRadius: 0
---- !u!114 &860113611197745304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8312658582875007641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bdb08e65ecb48f59e1c7812b155020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  damage: 20
-  manaCost: 10
-  lifeTime: 2
-  rb: {fileID: 2765694614557128673}
 --- !u!95 &-8318710116710209864
 Animator:
   serializedVersion: 3
@@ -176,7 +158,7 @@ Animator:
   m_GameObject: {fileID: 8312658582875007641}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c3e281146d2ee449eb04dd396ab48672, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
