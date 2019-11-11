@@ -8,6 +8,7 @@ TagManager:
   - itemHealth
   - itemMana
   - itemStrength
+  - itemDefense
   layers:
   - Default
   - TransparentFX

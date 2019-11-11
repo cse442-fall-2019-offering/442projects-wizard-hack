@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public Slider playerManaSlider;
     public Image damageImage;
     public GameObject strengthIcon;
+    public bool defenseActive;
 
     bool playerDead;
     bool playerDamaged;
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         strength = false;
         defense = false;
         strengthIcon.SetActive(false);
+        defenseActive = false;
     }
 
     public bool getStrength()
@@ -40,7 +42,6 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (playerCurrentMana + manaRegenRate > initialMana)
         {
             playerCurrentMana = initialMana;
@@ -53,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene("Game_Over_Screen");
         }
-        // Debug.Log("Text: " + strength);
+        Debug.Log("Health: " + playerCurrentHealth);
     }
 
 
@@ -104,27 +105,27 @@ public class PlayerHealth : MonoBehaviour
         else if(col.CompareTag("itemStrength"))
         {
             Destroy(col.gameObject);
-            addStrength();
+            strength = true;
+            strengthIcon.SetActive(true);
+            Invoke ("turnStrengthFalse", 5);
         }
         else if(col.CompareTag("itemDefense"))
         {
             Destroy(col.gameObject);
-
+            defenseActive = true;
+            // Invoke ("turnDefenseFalse", 5);
         }
     }
 
-    public void addStrength()
-    {
-        strength = true;
-        strengthIcon.SetActive(true);
-        Invoke ("turnFalse", 5);
-        
-    }
-
-    void turnFalse()
+    void turnStrengthFalse()
     {
         strength = false;
         strengthIcon.SetActive(false);
+    }
+    void turnDefenseFalse()
+    {
+        defenseActive = false;
+        // strengthIcon.SetActive(false);
     }
 
 }
