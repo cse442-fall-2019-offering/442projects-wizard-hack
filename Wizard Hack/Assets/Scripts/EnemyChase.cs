@@ -100,14 +100,5 @@ public class EnemyChase : MonoBehaviour
         // animator.SetBool("Should_Attack", false);
     }
 
-    public void defenseActiveTrue()
-    {
-        defenseActive = true;
-    }
-    public void defenseActiveFalse()
-    {
-        defenseActive = false;
-    }
-
 
 }
