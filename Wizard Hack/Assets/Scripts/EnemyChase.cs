@@ -12,6 +12,7 @@ public class EnemyChase : MonoBehaviour
     public float z;
 	private Transform player;
     public int damageAmount;
+    private bool defenseActive;
 
 	public GameObject my_player;
 	PlayerHealth ph;
@@ -24,6 +25,7 @@ public class EnemyChase : MonoBehaviour
     	ph = my_player.GetComponent<PlayerHealth>();
         transform.localScale = new Vector3(x, y, z);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        defenseActive = false;
     }
 
     // Update is called once per frame
@@ -87,11 +89,16 @@ public class EnemyChase : MonoBehaviour
     void attack()
     {
         animator.SetBool("Should_Attack", true);
-        ph.damagePlayer(damageAmount); 
+        if (ph.defenseActive)
+        {
+            ph.damagePlayer(damageAmount/2); 
+        }
+        else {
+            ph.damagePlayer(damageAmount); 
+        }
         canAttack = false;
         // animator.SetBool("Should_Attack", false);
     }
-
 
 
 }
