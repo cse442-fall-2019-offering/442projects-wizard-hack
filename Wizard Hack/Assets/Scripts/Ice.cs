@@ -19,8 +19,26 @@ public class Ice : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collision)
     {
         
+        EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        EnemyChase enemyChase =  collision.GetComponent<EnemyChase>();
+          if (enemyHealth != null && enemyHealth.isDead)
+        {
+            return;
+        }
+        if (enemyHealth != null)
+        {
+           float s = enemyChase.speed;
+           enemyChase.speed=s-(s/3);
+          /* while(enemyChase.speed < s){
+            enemyChase.speed+=1;
+           }*/
+         
+           // enemyHealth.damageEnemy(damage);
+            Destroy(gameObject);
+            //enemyChase.speed=s;
+        }
     }
 }
