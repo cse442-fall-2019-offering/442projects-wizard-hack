@@ -5,7 +5,7 @@ using UnityEngine;
 public class Poison : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 20;
+    public int damage = 10;
     public int manaCost = 10;
     public int lifeTime = 2;
     public Rigidbody2D rb;
