@@ -9,6 +9,7 @@ TagManager:
   - itemMana
   - itemStrength
   - itemDefense
+  - Bubble
   layers:
   - Default
   - TransparentFX

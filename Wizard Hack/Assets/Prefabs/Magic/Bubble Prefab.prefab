@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9112580106858708216}
   m_Layer: 0
   m_Name: Bubble Prefab
-  m_TagString: Untagged
+  m_TagString: Bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 6002567020143763459, guid: f6e5c8b5691d5df48b101202e8df151f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  manaCost: 15
+  manaCost: 30
   lifeTime: 5
   rb: {fileID: 9112580106858708216}
   animator: {fileID: 3272601386362954753}

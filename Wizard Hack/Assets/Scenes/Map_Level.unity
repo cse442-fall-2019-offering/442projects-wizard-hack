@@ -1291,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minotaur Prefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4512703357561692491, guid: fa6257bfd10584c498dd4040858cb807,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4512703357561692498, guid: fa6257bfd10584c498dd4040858cb807,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -108384,6 +108389,8 @@ MonoBehaviour:
   playerManaSlider: {fileID: 158880345}
   damageImage: {fileID: 1882358529}
   strengthIcon: {fileID: 1848996440}
+  defenseIcon: {fileID: 0}
+  defenseActive: 0
 --- !u!114 &3629511912391494760
 MonoBehaviour:
   m_ObjectHideFlags: 0

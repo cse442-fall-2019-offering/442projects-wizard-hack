@@ -40,6 +40,7 @@ public class MagicShooting : MonoBehaviour
     void blowBubble(float manaCost)
     {
         playerHealth.useMana(manaCost);
-        Instantiate(bubble, firePoint.position, firePoint.rotation);
+        Bubble bub = Instantiate(bubble, firePoint.position, firePoint.rotation);
+        LevelController.NotifyEnemiesAboutBubble(bub);
     }
 }
