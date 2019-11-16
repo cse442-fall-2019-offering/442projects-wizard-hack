@@ -108340,6 +108340,7 @@ GameObject:
   - component: {fileID: 3629511912391494759}
   - component: {fileID: 3629511912391494758}
   - component: {fileID: 702136549}
+  - component: {fileID: 3629511912391494766}
   - component: {fileID: 3629511912391494765}
   m_Layer: 0
   m_Name: Player Prefab
@@ -108530,6 +108531,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoisonPoint: {fileID: 3629511912298104714}
   poison: {fileID: 2040677007571829145, guid: 3dbf198b74d004405b4d56d88ef83259, type: 3}
+--- !u!114 &3629511912391494766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3629511912391494757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7460bc803cb2c45e59b81a3c09a61e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 3629511912298104714}
+  icePrefab: {fileID: 8735575980128110438, guid: 0fd4c628b7ee7498bb5c5041a6c0920e,
+    type: 3}
 --- !u!1001 &5737358374866216922
 PrefabInstance:
   m_ObjectHideFlags: 0

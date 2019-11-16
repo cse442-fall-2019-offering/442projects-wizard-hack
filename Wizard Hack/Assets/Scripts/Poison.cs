@@ -5,7 +5,7 @@ using UnityEngine;
 public class Poison : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 20;
+    public int damage = 10;
     public int manaCost = 10;
     public int lifeTime = 2;
     public Rigidbody2D rb;
@@ -17,5 +17,18 @@ public class Poison : MonoBehaviour
         Destroy(gameObject, lifeTime);
     }
 
-  
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        if (enemyHealth != null && enemyHealth.isDead)
+        {
+            return;
+        }
+        if (enemyHealth != null)
+        {
+            enemyHealth.damageEnemy(damage);
+            Destroy(gameObject);
+        }
+
+    }
 }
