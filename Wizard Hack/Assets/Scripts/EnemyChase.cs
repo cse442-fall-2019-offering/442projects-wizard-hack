@@ -10,9 +10,13 @@ public class EnemyChase : MonoBehaviour
     public float x;
     public float y;
     public float z;
-	private Transform player;
+	private Transform player, chase;
+    private ArrayList bubbles;
+    private bool chasingBubble;
+    private bool chasingPlayer;
     public int damageAmount;
     private bool defenseActive;
+    public float attackDistance;
 
 	public GameObject my_player;
 	PlayerHealth ph;
@@ -25,21 +29,24 @@ public class EnemyChase : MonoBehaviour
     	ph = my_player.GetComponent<PlayerHealth>();
         transform.localScale = new Vector3(x, y, z);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        chase = player;
+        bubbles = new ArrayList();
         defenseActive = false;
+        attackDistance = 1.5f;
+        chasingPlayer = true;
     }
 
     // Update is called once per frame
     void Update() {
-        if (!gameObject.GetComponent<EnemyHealth>().isDead)
-        {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (!gameObject.GetComponent<EnemyHealth>().isDead && chase!=null)
+        {          
+            float distanceToChaseTransform = Vector2.Distance(transform.position, chase.position);
             // Debug.Log("distance to player: " + distanceToPlayer);
-            if (distanceToPlayer < distanceToStartAttack && distanceToPlayer > 1)
+            if (distanceToChaseTransform < distanceToStartAttack && distanceToChaseTransform > 1)
             {
                 // ** LOOK AT PLAYER **
-                Vector3 distanceVector = player.position - transform.position;
+                Vector3 distanceVector = chase.position - transform.position;
                 // Debug.Log(direction[0]);
-
 
                 if (distanceVector[0] >= 0)
                 {
@@ -52,7 +59,7 @@ public class EnemyChase : MonoBehaviour
                 // ** End **
 
                 // ** CHASE PLAYER **
-                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, chase.position, speed * Time.deltaTime);
                 animator.SetFloat("Speed", 1);
 
                 // ** CATCH PLAYER ** 
@@ -65,7 +72,7 @@ public class EnemyChase : MonoBehaviour
 
             if (canAttack)
             {
-                if (distanceToPlayer <= 2)
+                if (chasingPlayer && distanceToChaseTransform <= attackDistance)
                 {
                     attack();
                 }
@@ -91,14 +98,56 @@ public class EnemyChase : MonoBehaviour
         animator.SetBool("Should_Attack", true);
         if (ph.defenseActive)
         {
-            ph.damagePlayer(damageAmount/2); 
+            ph.damagePlayer(damageAmount / 2);
         }
-        else {
-            ph.damagePlayer(damageAmount); 
+        else
+        {
+            ph.damagePlayer(damageAmount);
         }
         canAttack = false;
         // animator.SetBool("Should_Attack", false);
     }
 
+    public void addNewBubble(Bubble bubble)
+    {
+        bubbles.Add(bubble);
+        findClosestBubble();
+    }
 
+    public void removePoppedBubble(Bubble bubble)
+    {
+        bubbles.Remove(bubble);
+        if (bubbles.Count == 0)
+        {
+            chasePlayer();
+        }
+        else
+        {
+            findClosestBubble();
+        }
+    }
+
+    public void findClosestBubble()
+    {
+        float minDistance = 100000f;
+        foreach(Bubble bubble in bubbles)
+        {
+            if (bubble != null)
+            {
+                float currDist = Vector2.Distance(transform.position, bubble.transform.position);
+                if (currDist < minDistance)
+                {
+                    minDistance = currDist;
+                    chase = bubble.transform;
+                }
+            }
+        }
+        chasingPlayer = false;
+    }
+
+    public void chasePlayer()
+    {
+        chase = player;
+        chasingPlayer = true;
+    }
 }

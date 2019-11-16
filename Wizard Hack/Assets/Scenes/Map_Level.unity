@@ -1291,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minotaur Prefab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4512703357561692491, guid: fa6257bfd10584c498dd4040858cb807,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4512703357561692498, guid: fa6257bfd10584c498dd4040858cb807,
         type: 3}
       propertyPath: m_LocalPosition.x
