@@ -6,7 +6,7 @@ public class Ice : MonoBehaviour
 {
 	public float speed=10f;
     public int damage=20;
-    public int manaCost=10;
+    public int manaCost=15;
     public int lifeTime=2;
     public Rigidbody2D rb;
 
