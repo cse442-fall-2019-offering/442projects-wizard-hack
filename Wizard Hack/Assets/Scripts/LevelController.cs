@@ -48,7 +48,7 @@ public class LevelController : MonoBehaviour
         Debug.Log("Enemy Kill Count :" + enemyKillCount);
         if (enemyKillCount >= enemyCountTotal)
         {
-            //Invoke("victory",1.5f);
+            Invoke("victory",1.5f);
         }
         
     }

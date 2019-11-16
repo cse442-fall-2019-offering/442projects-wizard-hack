@@ -13,7 +13,7 @@ public class GateControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(FindObjectOfType<LevelController>().enemyKillCount >= FindObjectOfType<LevelController>().enemyCountTotal)
+        if(FindObjectOfType<LevelController>().enemyKillCount >= FindObjectOfType<LevelController>().enemyCountTotal - 1)
         {
             Destroy(gameObject);
                  
