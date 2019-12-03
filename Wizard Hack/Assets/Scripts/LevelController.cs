@@ -10,12 +10,13 @@ public class LevelController : MonoBehaviour
     public GameObject victoryCanvas;
     public GameObject pauseMenu;
     public GameObject enemyCountText;
+    public static GameObject[] enemies;
 
     // Start is called before the first frame update
     void Start()
     {
         victoryCanvas.SetActive(false);
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemyCountTotal = enemies.Length;
         updateEnemyCountText();
         Debug.Log("Enemy Count Start:" + enemyCountTotal);
@@ -69,5 +70,26 @@ public class LevelController : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Start_Menu");
+    }
+
+    public static void NotifyEnemiesAboutBubble(Bubble bubble)
+    {
+        foreach(GameObject enemy in enemies){
+            if (enemy != null && !enemy.GetComponent<EnemyHealth>().isDead)
+            {
+                enemy.GetComponent<EnemyChase>().addNewBubble(bubble);
+            }
+        }
+    }
+
+    public static void NotifyEnemiesBubblePopped(Bubble bubble)
+    {
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy != null && !enemy.GetComponent<EnemyHealth>().isDead)
+            {
+                enemy.GetComponent<EnemyChase>().removePoppedBubble(bubble);
+            }
+        }
     }
 }

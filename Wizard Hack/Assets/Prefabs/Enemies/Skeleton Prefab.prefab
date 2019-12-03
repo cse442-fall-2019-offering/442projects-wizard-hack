@@ -566,12 +566,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  distanceToStartAttack: 5
+  distanceToStartAttack: 10
   animator: {fileID: 4482193929697366685}
   x: 5
   y: 5
   z: 5
   damageAmount: 15
+  attackDistance: 0
   my_player: {fileID: 5737358373694136415, guid: 1536c09954bf1de4ca5236680ec04903,
     type: 3}
 --- !u!114 &4482193929697366687
