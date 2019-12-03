@@ -26,7 +26,7 @@ public class EnemyChase : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-    	ph = my_player.GetComponent<PlayerHealth>();
+        ph = GameObject.Find("Player Prefab").GetComponent<PlayerHealth>();
         transform.localScale = new Vector3(x, y, z);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         chase = player;
@@ -95,6 +95,7 @@ public class EnemyChase : MonoBehaviour
 
     void attack()
     {
+        Debug.Log("Attack Called");
         animator.SetBool("Should_Attack", true);
         if (ph.defenseActive)
         {
